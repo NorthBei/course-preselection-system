@@ -1,0 +1,95 @@
+#background{
+	display:block;
+}
+
+strong{
+	color:#D00A0A;
+}
+
+article p{
+	font-family: "Helvetica Neue",Helvetica,"Nimbus Sans L",Arial,"Liberation Sans","Hiragino Sans GB","Microsoft YaHei","Wenquanyi Micro Hei","WenQuanYi Zen Hei","ST Heiti",SimHei,"WenQuanYi Zen Hei Sharp",sans-serif;
+	font-size: 16.5px !important;
+	line-height: 2.1 !important;
+}
+
+article>ul>li{
+	color:#2A5FB1;
+	font-family: sans-serif;
+	line-height: 2.1 !important;
+	font-size: 17px;
+}
+
+#demofilterIcon{	
+	border-collapse: collapse;
+	border:2px solid #858585;
+}
+
+#demofilterIcon th,#demofilterIcon td{
+	border:1px solid black;
+	text-align:center;
+	border-collapse: collapse;
+	font-size:16px;
+	color:#858585;
+	padding:7px;
+}
+#demofilterIcon tr td:nth-child(2){
+	text-align:left;
+}
+
+#demofilterIcon i{
+	font-size:27px;
+}
+
+#filterExample{
+	font-size:16px;
+}
+
+#content{
+	padding: 0 9vw 35px;
+}
+
+#slogan{
+	border-bottom: 1px solid #858585;
+	padding: 8px;
+	font-size: 23px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.title{
+    color: #c02020;
+    font-size: 22px;
+    font-weight: bold;
+	margin: 22px 0;
+}
+
+/*RWD*/
+
+@media screen and (max-width: 860px) {	
+	.title{
+		font-size:19px;
+	}
+}
+
+@media screen and (max-width: 650px) {
+	#content{
+		padding: 0 3vw;
+	}
+	#slogan{
+		font-size:4vw;
+	}
+}
+
+@media screen and (max-width: 550px) {
+	#background{
+		height:45vh;
+	}
+	
+	#slogan{
+		font-size:4vw;
+	}
+	
+	.title{
+		font-size:19px;
+	}
+}

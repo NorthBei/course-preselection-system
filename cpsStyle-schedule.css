@@ -1,0 +1,251 @@
+#background{
+	display:none;
+}
+
+#schedule-result{
+	height: 35px;
+	line-height:35px;
+	background-color: #ececec;
+	color: #858585;
+	font-size: 20px;
+	box-sizing: border-box;
+	width: 100%;
+	padding: 0 7vw;
+}
+
+#content{
+	padding:0;
+}
+
+#rwdTable{
+	padding:30px 10%;
+	background-color: #F9F9F9;
+	width: 100%;
+    overflow-x: auto;
+    box-sizing: border-box;
+}
+
+#timeTable,tr,td{
+	border:1px solid #BDBDBD;
+	border-collapse: collapse;
+	font-family:"Yu Gothic","微軟正黑體";
+}
+
+#timeTable td{
+	width:100px;
+	background-color:white;
+	vertical-align: top;
+}
+
+#timeTable{
+	width:100%;
+	text-align:center;
+}
+
+#timeTable tr>td:nth-child(1){
+    height: 40px;
+    font-size: 16px;
+    width: 1px;
+    background-color: #64A3BD;
+    color: white;
+    border: 1px solid white;
+	vertical-align: middle;
+}
+
+
+#tHead>th{
+	height:40px;
+	font-size:17px;
+	background-color:#64A3BD;
+	font-weight:bold;
+	border:1px solid white;
+	color: white;
+}
+
+.rest{
+	background-color:#ECECEC;
+}
+
+.courseCard{
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.52), 0 1px 4px rgba(0, 0, 0, 0.34);
+	border-radius: 2px;
+	background: #f3f3f3;
+	box-sizing: border-box;
+	margin: 4px 6px 9px;
+}
+
+.courseNum{
+	text-align:left;
+
+	font-family:"Microsoft YaHei","微軟正黑體";
+	background-color: #E0DFDF;
+    padding: 3px 7px;
+	color:#5A5959;
+	cursor:pointer;
+}
+
+
+.removeCourse>i{
+    float: right;
+	font-size: 19px;
+	color:#D86455;
+	cursor:pointer;
+}
+
+.courseName{
+	text-align:left;
+	font-weight:600;
+	font-size:16px;
+    padding: 2px 6px;
+	cursor:pointer;
+}
+
+.classID{
+	padding-left:4px;
+}
+
+.room{
+	text-align:right;
+	padding: 2px 6px;
+}
+
+/*Pop out*/
+#popContent{
+	position: fixed;
+	top: 50px;
+    right: 0;
+    background-color: #fff;
+    z-index: 9999;
+    border: 1px solid #858585;
+	min-width: 25.5vh;
+	overflow:auto;
+    height: 92vh;
+    width: 25.5%;
+	display:none;
+}
+
+#pop-out-head{
+    background-color: #454545;
+    height: 34px;
+	line-height: 34px;
+    width:inherit;
+	font-family:"Yu Gothic","微軟正黑體";
+	color:white;
+    font-size: 18px;
+    padding: 0 12px;
+    box-sizing: border-box;
+	position:fixed;
+}
+
+#pop-out-head>i{
+	vertical-align:middle;
+}
+
+.lang-select,#closeButton{
+	display:inline-block;
+	float:right;
+	padding: 0 6px;
+	cursor:pointer;
+}
+
+.lang-select>div{
+	height: 3px;
+    width: 100%;
+    background-color: white;
+    margin-top: -3px;
+}
+
+#pop-out{
+	font-size: 190px;
+    color: #8b8b8b;
+    display: block;
+    text-align: center;
+	width: 100%;
+	background-color:white;
+	margin-top:34px;
+}
+
+#courseDetailTable #colspan2{
+    background-color: #89848b;
+}
+
+#courseDetailTable{
+	border-collapse:collapse;
+	border-spacing:0;
+	display:block;
+	border:none;
+	font-family:"Yu Gothic","微軟正黑體";
+}
+
+#courseDetailTable td{
+	height: 39px;
+    line-height: 29px;
+    font-size: 14px;
+    box-sizing: border-box;
+	border-bottom:2px solid white;
+}
+
+#courseDetailTable tr>td:nth-child(1){
+	width:24%;
+	font-weight: bold;
+	background-color:#d2d2d2;
+	color:white;
+	font-family:"Yu Gothic","微軟正黑體";
+	font-size: 17px;
+}
+
+#courseDetailTable tr>td:nth-child(2){
+	width:70%;
+	text-align:left;
+}
+
+/*RWD*/
+@media screen and (max-width: 1150px) {	
+	#rwdTable{
+		padding:30px 3%;
+	}
+	
+	#popContent{
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		margin-left: -35vw;
+		margin-top: -45vh;
+		height: 90vh;
+		width: 70vw;
+		box-shadow: 0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28);
+	}
+}
+
+@media screen and (max-width: 860px) {
+	#rwdTable{
+		padding:10px 1%;
+	}
+	
+	.disappear{
+		display:none;
+	}
+	
+	#timeTable tr>td:nth-child(1){
+		width: 50px;
+	}
+}
+
+@media screen and (max-width: 650px) {
+	#rwdTable{
+		padding:10px 0%;
+	}
+	
+	.removeCourse>i{
+		padding-top: 4px;
+	}
+	
+	#popContent{
+		margin-left: -45vw;
+		width: 90vw;
+	}
+}
+
+@media screen and (max-width: 550px) {
+
+}

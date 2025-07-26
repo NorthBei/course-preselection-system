@@ -1,0 +1,355 @@
+#background{
+	display:none;
+}
+
+#content{
+	padding: 0;
+}
+
+#filter-result{
+	height: 35px;
+	background-color: #ececec;
+	color: #858585;
+	font-size: 20px;
+	box-sizing: border-box;
+	padding-right: 25%;
+	width: 100%;
+}
+
+#disappear{
+	display:none;
+}
+
+#courseContent{
+    padding-right: 25%;
+    font-family: "微軟正黑體","Yu Gothic";
+}
+
+#courseListHeader{
+    height: 35px;
+    color: white;
+    font-size: 16px;
+	font-weight:bold;
+    line-height: 35px;
+    box-sizing: border-box;
+	font-family:"Yu Gothic","微軟正黑體";
+}
+
+#courseListHeader>div{
+	display:inline-block;
+	text-align:center;
+	color: #8b8b8b;
+	margin-right: -5px;
+}
+
+.courseList>div{
+	display:inline-block;
+	text-align:center;
+	font-weight: bold;
+	text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.courseList>div:nth-child(4n){
+	text-align:left;
+}
+
+.courseList{
+	height: 39px;
+    line-height: 38px;
+	font-size: 14px;
+	box-sizing: border-box;
+	/*cursor:pointer;*/
+	border-bottom: 1px solid #D0CCCC;
+}
+
+.courseList:hover{
+    background-color: #F3F3F3;
+}
+
+.tag{
+    position: relative;
+    width: 5px;
+    display: inline-block;
+    height: 100%;
+    vertical-align: bottom;
+}
+.addCourse{
+	width:5%;
+	color:#c0392b;
+}
+
+.addIcon{
+    font-size: 24px;
+    vertical-align: bottom;
+	cursor:pointer;
+}
+
+.number{
+	width: 5%;
+}
+.courseNum{
+	width:11%;
+	color:#176ca4;
+}
+.courseName{
+	width:20%;
+	text-align:left;
+	color:#176ca4;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}			
+.time{
+	width:12%;
+	color:#8f8f8f;
+}		
+.gradeNclass{
+	width:10%;
+	color:#8f8f8f;
+}
+.teacher{
+	width:9%;
+}
+
+.depart{
+	width:16%;
+}
+
+.type{
+	width:6%;
+	color:#109d58;
+}
+
+hr{
+    width: 97%;
+    background-color: #D0CCCC;
+    height: 1px;
+    margin: 0 1.5%;
+    border-style: none;
+}
+
+aside{
+	position:fixed;
+	top:84px;
+	right:0;
+	font-size:180px;
+	height:79vh;
+	width:25.5%;
+	line-height:79vh;
+	color:#858585;
+	text-align:center;
+}
+
+#popContent{
+	position: fixed;
+	top: 50px;
+    right: 0;
+    background-color: #fff;
+    z-index: 9999;
+    border: 1px solid #858585;
+	min-width: 25.5vh;
+	overflow:auto;
+    height: 92vh;
+    width: 25.5%;
+	display:none;
+}
+
+#pop-out-head{
+    background-color: #454545;
+    height: 34px;
+	line-height: 34px;
+    width:inherit;
+	font-family:"Yu Gothic","微軟正黑體";
+	color:white;
+    font-size: 18px;
+    padding: 0 12px;
+    box-sizing: border-box;
+	position:fixed;
+}
+
+#pop-out-head>i{
+	vertical-align:middle;
+}
+
+.lang-select,#closeButton{
+	display:inline-block;
+	float:right;
+	padding: 0 6px;
+	cursor:pointer;
+}
+
+.lang-select>div{
+	height: 3px;
+    width: 100%;
+    background-color: white;
+    margin-top: -3px;
+}
+
+#pop-out{
+	font-size: 190px;
+    color: #8b8b8b;
+    display: block;
+    text-align: center;
+	width: 100%;
+	background-color:white;
+	margin-top:34px;
+}
+
+#courseDetailTable{
+	border-collapse:collapse;
+	border-spacing:0;
+	display:block;
+	font-family:"Yu Gothic","微軟正黑體";
+	table-layout:fixed;
+    word-break:break-all;
+    word-wrap:break-word;
+}
+
+#courseDetailTable td{
+	height: 39px;
+    line-height: 29px;
+    font-size: 14px;
+    box-sizing: border-box;
+	border-bottom:2px solid white;
+	word-wrap:break-word;
+}
+
+#courseDetailTable tr{
+    width: 100%;
+}
+
+#courseDetailTable tr>td:nth-child(1){
+	width:24%;
+	min-width:24%;
+	font-weight: bold;
+	background-color:#d2d2d2;
+	color:white;
+	font-size: 17px;
+}
+
+#courseDetailTable tr>td:nth-child(2){
+	width:70%;
+	min-width:70%;
+	text-align:left;
+}
+
+#courseDetailTable #colspan2{
+	background-color:#89848b;
+}
+/*RWD*/
+@media screen and (max-width: 1150px) {	
+	#courseContent{
+		width:100%;
+		padding-right: 0;
+	}
+	
+	#filter-result{
+		padding-right: 0;
+	}
+	
+	aside{
+		display:none;
+	}
+	
+	#popContent{
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		margin-left: -35vw;
+		margin-top: -45vh;
+		height: 90vh;
+		width: 70vw;
+		box-shadow: 0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28);
+	}
+}
+
+@media screen and (max-width: 860px) {
+	#filter-result{
+		padding: 7px 7vw;
+	}
+
+	#disappear{
+		display:inline-block;
+	}
+	
+	#courseListHeader{
+		display:none;
+	}
+	.courseList{
+		height: 76px;
+		line-height: 75px;
+		position: relative;
+	}
+	.addCourse{
+		width: initial;
+		position: absolute;
+		font-size: 30px;
+		left: 16px;
+	}
+	.number{
+		visibility: hidden;
+		position: absolute;
+	}
+	.courseNum{
+		width: initial;
+		position: absolute;
+		top: -20px;
+		left: 59px
+	}
+	.courseName{
+	    overflow: hidden;
+		width: 40vw;
+		position: absolute;
+		top: -22px;
+		left: 149px;
+		font-size: 17px;
+	}			
+	.time{
+		width: initial;
+		position: absolute;
+		top: 3px;
+		left: 58px;
+	}		
+	.gradeNclass{
+		width: initial;
+		position: absolute;
+		left: 152px;
+		top: 3px;
+	}
+	.teacher{
+		width: initial;
+		position: absolute;
+		top: 26px;
+		left: 59px;
+	}
+
+	.depart{
+		width: initial;
+		position: absolute;
+		top: 26px;
+		left: 116px;
+	}
+
+	.type{
+		width: initial;
+		position: absolute;
+		top: -20px;
+		right: 11px;
+		font-size: 17px;
+	}
+
+	hr{
+		width: 97%;
+		background-color: #D0CCCC;
+		height: 1px;
+		margin: 0 1.5%;
+		border-style: none;
+	}
+}
+
+@media screen and (max-width: 650px) {
+	#popContent{
+		margin-left: -45vw;
+		width: 90vw;
+	}
+}

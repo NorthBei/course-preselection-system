@@ -1,0 +1,764 @@
+/*JScrollPanel*/
+.jspVerticalBar
+{
+	display:none;
+}
+
+.jspHorizontalBar
+{
+	height: 5px;/*��bar����*/
+}
+
+/*JScrollPanel*/
+a{
+	color:inherit;
+	text-decoration: none;
+}
+/*---*/
+
+.cps{
+	font-size: 47px;
+	text-align: center;
+	height: 62px;
+	line-height: 62px;
+	margin: 11px 0;
+	font-family: Geoma, 'Yu Gothic';
+	color:#858585;
+}
+
+form{
+	padding: 0 28px;
+}
+
+.input{
+    border: none;
+    box-sizing: border-box;
+    color: Black;
+    display: block;
+    font-size:18px;
+    padding: 5px 10px 5px 46px;
+    box-shadow: 1px 1px 3px 2px #b6b4b5 inset, -1px -1px 3px 2px #b6b4b5 inset;
+}
+
+.place{
+    position: relative;
+    top: -33px;
+    left: 13px;
+    display: inherit;
+    width: 22px;
+	text-align: center;
+	font-size: 25px;
+	color:#858585;
+}
+
+.input,#logoutButton,#loginButton{
+    width: 290px;
+    border-radius: 6px;    
+    height: 44px;
+    line-height: 44px;
+	margin: 0 auto;
+}
+
+#logoutButton,#loginButton{
+    background-color: #858585;
+    color: White;
+    text-align: center;
+    cursor: pointer;
+	font-family: sans-serif;/*initial;*/
+	/*font-family: "�L�n������","Microsoft YaHei UI Bold",Montserrat*/
+	display: inline-block;
+    margin: 0px -18px 7px 29px;
+	font-size: 25px;
+}
+
+#loginButton:hover,#logoutButton:hover{
+	background-color:black;
+}
+
+.remind{
+	font-size:15px;
+	text-align: center;
+	height: 37px;
+	color: #858585;
+}
+
+#warning{
+	color: #C02020;
+    font-weight: bolder;
+    font-size: 16px;
+    display: none;
+    font-family: inherit;
+}
+
+/*"Yu Gothic"*/
+@font-face {
+	font-family:Geoma;
+	src: url("./fonts/Geoma Thin Demo.otf") format('opentype'),
+		local("Yu Gothic"),
+		local("HelveticaNeue-Bold");
+	font-weight: bold;
+}
+
+@font-face {
+	font-family:Century;
+	src: url("./fonts/GOTHIC.TTF") format('truetype'),
+		local("Yu Gothic"),
+		local("HelveticaNeue-Bold");
+	font-weight: bold;
+}
+html,body{
+	margin:0;
+	padding:0;
+}
+html{
+	position: relative;
+    min-height: 100%;
+}
+
+body{
+	margin: 0 0 35px; /* bottom = footer height */
+}
+
+header{
+	position:fixed;
+	height: 50px;
+    line-height: 50px;/*equal to height*/
+	border-bottom:1px solid #858585;
+	font-family:Geoma,"Yu Gothic";
+	color:#858585;
+	z-index:3;
+	background-color:white;
+	width:100vw;
+	display:block;
+	box-shadow: 0 0 2px rgba(0,0,0,.14),0 2px 8px rgba(0,0,0,.28);
+}
+
+#cover{
+    height: 50px;
+    width: 100%;
+    z-index: 2;
+}
+
+#toast{
+    position: fixed;
+    top: 71vh;
+    left: 50%;
+    transform: translate(-50%,0);
+    background-color: #666666;
+    color: white;
+    height: 28px;
+    border-radius: 15px;
+    margin: 0 auto;
+    line-height: 28px;
+    font-size: 17px;
+	font-family:"Yu Gothic","sans-serif";
+	display:none;
+	padding:0 11px;
+}
+
+nav{
+	height:100vh;
+	width:285px;
+	position:absolute;
+	top:0;
+	left:-285px;
+	z-index:1;
+	background-color:white;
+	box-shadow: 0 0 4px rgba(0,0,0,.14),3px 4px 8px rgba(0,0,0,.28);
+	position:fixed;
+}
+
+.rectangle{
+	height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid #dddddd;
+    font-size: 25px;
+    color: #858585;
+    margin: 0 14px;
+    padding: 0 17px;
+}
+
+.rectangle>i{
+	cursor:pointer;
+}
+
+.words{
+	font-size:16px;
+	font-family:"Yu Gothic";
+	font-weight:bold;
+	display:inline-block;
+	vertical-align: middle;
+	cursor:inherit;
+}
+
+#logo,#search-bar,#options{
+	display:inline-block;
+}
+
+#bars{
+    font-size: 21px;
+    padding: 0 20px;
+    vertical-align: top;
+	display:none;
+	cursor:pointer;
+}
+
+#bars i{
+	vertical-align: middle;
+}
+
+#logo{
+	margin:0 7vw 0 7vw;
+	font-size:34px;
+	cursor: pointer;
+	vertical-align: middle;
+}
+#search-bar{
+	vertical-align: top;
+	margin-top: -1px;
+}
+
+#searchWhat{
+	height:28px;
+	font-size:16px;
+	padding:2px 6px;
+	width:42vw;
+	vertical-align: middle;
+	line-height:46px;
+}
+
+#search-icon{
+    border: 1px solid #858585;
+    height: 26px;
+    width: 26px;
+    vertical-align: middle;
+    line-height: 26px;
+    margin: -6px;
+    font-size: 18px;
+	background-color: #858585;
+	color:white;
+}
+
+#search-icon:before{
+	margin-left:5px;
+	cursor: pointer;
+}
+
+#search-icon:hover{
+	background-color: black;
+}
+
+#options{
+    margin-left: 6vw;
+	font-size:25px;
+	vertical-align: top;
+	position: absolute;
+}
+
+#options>i{
+	padding: 6px;
+	cursor: pointer;
+}
+
+#options i:hover{
+	color:black;
+}
+
+#filterPanel{
+	right:-40px;
+}
+
+#gearPanel{
+	right:-90px;
+}
+
+#loginPanel{
+	right:-172px;
+}
+
+#loading{
+	display:none;
+	width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 10;
+    background-color: rgba(191, 191, 191, 0.31);
+}
+
+#loadingGif{
+    margin: 0 auto;
+    display: block;
+    margin-top: 140px;
+    width: 70px;
+}
+
+#logout{
+	width:100%;
+	height:100%;
+	display:none;
+}
+
+#logoutImg{
+	margin: 0 auto;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.list{
+	position: relative;
+	display:none;
+}
+
+#list-triangle{
+	display:inline-block;
+	position: absolute;
+	right: -12px;
+	z-index:-1;
+	height: 20px;
+}
+
+#list-triangle:before{
+	position: relative;
+    top: 22px;
+    left: 17px;
+    display: inline-block;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid #858585;
+    border-left: 12px solid transparent;
+    content: '';
+}
+
+#list-triangle:after{
+    position: relative;
+    top: -27px;
+    left: 18px;
+    display: inline-block;
+    border-right: 11px solid transparent;
+    border-bottom: 11px solid #ffffff;
+    border-left: 11px solid transparent;
+    content: '';
+}
+
+#listView{
+	position: absolute;
+    top: 44px;
+	right:-47px;
+    height: 371px;
+    width: 346px;
+    display: inline-block;
+    background-color: white;
+    border: 1px solid #858585;
+	z-index: -2;
+	box-shadow: 0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28);
+}
+
+.RWDhidden>i{
+	padding: 6px;
+	cursor:pointer;
+}
+
+.listViewTopContent{
+	display:none;
+}
+
+.listViewTopContent:nth-child(1){
+	display:block;
+}
+
+.styled-select {
+	background: url(./assets/down-arrow.png) no-repeat right #ddd;
+	width: 63px;
+    height: 25px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+	display: inline-block;
+}
+
+.styled-select select {
+	display: block;
+	width: inherit;
+	font-family:"Yu Gothic";
+    background: transparent;
+	padding: 2px 20px 2px 2px;
+    border: 0;
+    line-height: 20px;
+    font-size: 16px;
+    -webkit-appearance: none;
+    -webkit-appearance: none; /*Chrome*/
+	-moz-appearance: none; /*FF*/
+	appearance: none;/*CSS3*/
+}
+
+#width-42px{
+	width: 42px;
+}
+
+#width-79px{
+	width:79px;
+}
+
+#width-163px{
+	width: 163px;
+    margin-left: 8px;
+}
+
+#listViewTop{
+	margin: 0 9px;
+  border-bottom: 1px solid #C7BDBD;
+	line-height: 24px;	
+  padding: 7px 0;
+	height: 43px;
+  box-sizing: border-box;
+}
+
+.listWord{
+	font-size: 17px;
+	display: inline-block;
+	position: relative;
+	top: -5px;
+}
+
+#top-2px{
+	top:2px;
+	padding-right: 8px;
+}
+
+#width-51px{
+	width: 51px;
+	margin: 0 5px;
+}
+
+#plus{
+	position: absolute;
+    top: 10px;
+    right: 11px;
+	cursor: pointer;
+	font-size: 25px;
+}
+
+.filterIcon{
+	line-height: 37px;
+    padding:2px 11px 3px;
+    white-space: nowrap;
+}
+
+.filterList{
+	display: inline-block;
+    width: 290px;
+    overflow: auto;
+	overflow-y: hidden;
+    vertical-align: middle;
+	height:37px;
+}
+
+.filterTag{
+	font-family:"Yu Gothic";
+    font-size: 17px;
+    background-color: #858585;
+    color: white;
+    border-radius: 21px;
+    height: 23px;
+    display: inline-block;
+    padding: 1px 10px;
+    vertical-align: middle;
+    border: 1px solid #858585;
+    font-weight: 500;
+	margin-right: 5px;
+}
+
+.filterTag>div{
+	position: relative;
+    top: -6px;
+}
+
+.filterTag>div>i{
+    font-size: 21px;
+    margin-right: -7px;
+    cursor: pointer;
+    position: relative;
+    top: 1px;
+	padding-left:4px;
+}
+
+#mobileTag{
+	top: 2px;
+}
+
+.grayCircle{
+    width: 38px;
+    height: 38px;
+    border-radius: 29px;
+    background: #858585;
+	cursor: pointer;
+	display:inline-block;
+}
+
+.grayCircle:hover{
+	background-color:black;
+}
+
+.whiteCircle{
+	width: 34px;
+    height: 34px;
+    border-radius: 25px;
+    background: white;
+    position: relative;
+    top: 2px;
+    left: 2px;
+    line-height: 39px;
+}
+
+.whiteCircle>i{
+	font-size: 22px;
+	padding:3px;
+	display:block;
+	position: relative;
+	height: 30px;
+}
+.whiteCircle>i:before{
+    vertical-align: middle;
+    text-align: center;
+    width: 28px;
+    height: 20px;
+    display: inline-block;
+    line-height: 21px;
+}
+
+#pseudo>i:before{
+	vertical-align: middle;
+    text-align: center;
+    width: 28px;
+    height: 20px;
+    display: inline-block;
+	line-height: 15px;
+}
+
+#listViewBottom{
+    text-align: center;
+    border-top: 1px solid #C7BDBD;
+    line-height: 37px;
+    position: absolute;
+    width: 97%;
+    bottom: 0;
+    margin: 0 1.5%;
+}
+
+#listViewBottom>div{
+    display: inline-block;
+    border: 1px solid #858585;
+    border-radius: 6px;
+    font-size: 20px;
+    width: 72px;
+    height: 25px;    
+    text-align: center;
+    line-height: 24px;
+    font-family: "Yu Gothic";
+	cursor: pointer;
+	margin:0 3px;
+}
+
+#listViewBottom>div:hover{
+	color:black;
+	border:1px solid black;
+}
+
+#background{
+	background: url(./assets/XNTOUDAYLIGHT1920x1080-Mask_mini.jpg) top center no-repeat;
+	background-size:cover;
+	height: 55vh;
+	overflow:hidden;
+}
+
+#left-top{
+	color:white;
+}
+
+#left-top div:nth-child(1){
+	position:relative;
+	top:43px;
+	left:100px;
+	font-family:Geoma,"Yu Gothic";
+	font-size:97px;
+	text-shadow: 0 5px 6px #858585;
+}
+
+#left-top div:nth-child(2){
+	position: relative;
+	top: 27px;
+	left: 76px;
+	font-family: "Century";
+	font-size: 36px;
+	display:inline-block;
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#858585+56,000000+100&amp;0.65+54,0+87 */
+	background: -moz-radial-gradient(center, ellipse cover,  rgba(133,133,133,0.65) 54%, rgba(133,133,133,0.61) 56%, rgba(39,39,39,0) 87%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(54%,rgba(133,133,133,0.65)), color-stop(56%,rgba(133,133,133,0.61)), color-stop(87%,rgba(39,39,39,0)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover,  rgba(133,133,133,0.65) 54%,rgba(133,133,133,0.61) 56%,rgba(39,39,39,0) 87%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-radial-gradient(center, ellipse cover,  rgba(133,133,133,0.65) 54%,rgba(133,133,133,0.61) 56%,rgba(39,39,39,0) 87%,rgba(0,0,0,0) 100%); /* Opera 12+ */
+	background: -ms-radial-gradient(center, ellipse cover,  rgba(133,133,133,0.65) 54%,rgba(133,133,133,0.61) 56%,rgba(39,39,39,0) 87%,rgba(0,0,0,0) 100%); /* IE10+ */
+	background: radial-gradient(ellipse at center,  rgba(133,133,133,0.65) 54%,rgba(133,133,133,0.61) 56%,rgba(39,39,39,0) 87%,rgba(0,0,0,0) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6858585', endColorstr='#00000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+#right-bottom{
+	height:55vh;
+	position:absolute;
+	top:46px;
+	right:0px;
+}
+
+#AWS{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 75px;
+}
+
+#content{
+	min-height: 100%;
+	/*margin-bottom: 35px;*/
+}
+
+footer{
+	min-height:35px;
+	text-align:center;
+	background-color:#ddd;
+	font-family: "Century",;
+	line-height:35px;
+	position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+/*RWD*/
+
+@media screen and (max-width: 960px) {
+    #searchWhat{
+		width:36vw;
+	}
+	
+	#options{
+		margin-left:5vw;
+	}
+}
+
+@media screen and (max-width: 860px) {
+    #searchWhat{
+		width:45vw;
+	}
+	
+	#loginPanel>#listView{
+	    position: fixed;
+		z-index: 10000;
+		top: 50%;
+		left: 50%;
+		margin-left: -174px;
+		margin-top: -174px;
+	}
+	
+	#logo{
+		margin:0 7vw 0 -4px;
+	}
+	
+	#bars{
+		cursor: pointer;
+		display:inline-block;
+	}
+	
+	.RWDhidden{
+		display:none;
+	}
+	
+	#options{
+		margin-left:10vw;
+	}
+	
+	#left-top div:nth-child(1){
+		position: inherit;
+		font-size:88px;
+		text-align: center;
+		margin-top: 50px;
+	}
+	
+	#left-top div:nth-child(2){
+		position: inherit;
+		font-size: 32px;
+		display: inherit;
+		text-align: center;
+	}
+	
+	#AWS{
+		height:58px;
+	}
+
+}
+
+@media screen and (max-width: 650px) {
+
+	#search-bar{
+		display:none;
+	}
+	
+	#options{
+		position:absolute;
+		right:0;
+		top:0;
+		margin-right:10px;
+	}
+	
+	#left-top div:nth-child(1){
+		font-size:73px;
+	}
+	
+	#left-top div:nth-child(2){
+		font-size: 26px;
+	}
+	
+	footer{
+		margin-bottom:-35px;
+	}
+}
+
+@media screen and (max-width: 550px) {
+
+
+	#logo{
+		margin:0 7vw 0 -4px;
+	}
+	
+	#bars{
+		cursor: pointer;
+		display:inline-block;
+	}
+	
+	.RWDhidden,#search-bar{
+		display:none;
+	}
+	
+	#options{
+		position:absolute;
+		right:0;
+		top:0;
+		margin-right:10px;
+	}
+
+	#left-top div:nth-child(1){
+		position: inherit;
+		font-size:73px;
+		text-align: center;
+		margin-top: 50px;
+	}
+	
+	#left-top div:nth-child(2){
+		position: inherit;
+		font-size: 26px;
+		display: inherit;
+		text-align: center;
+	}
+	
+	#AWS{
+		height:58px;
+		bottom: 48px;
+	}
+
+}

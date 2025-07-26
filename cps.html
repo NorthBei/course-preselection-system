@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html prefix='og: http://ogp.me/ns#'>
+
+<head>
+	<meta charset="utf-8">
+	<!--分享文章到 Facebook 的 Meta 設定﹍縮圖+標題+摘要+作者資訊-->
+	<meta property="og:title" content="CPS，Course Preselection System">
+	</meta>
+	<meta property="og:type" content="website">
+	</meta>
+	<meta property="og:url" content="http://140.121.196.20:7779/CPS/cps.html">
+	</meta>
+	<meta property="og:image" content="http://140.121.196.20:7779/CPS/FB_image_small.jpg">
+	</meta>
+	<meta property="og:image" content="http://140.121.196.20:7779/CPS/FB_image_large.jpg">
+	</meta>
+	<meta property="og:description" content="love what you choose and choose what you love.">
+	</meta>
+	<meta property="og:site_name" content="CPS">
+	</meta>
+	<meta content="https://www.facebook.com/profile.php?id=100002020489307" property="article:author" />
+	<!--分享文章到 Facebook 的 Meta 設定﹍縮圖+標題+摘要+作者資訊-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>CPS</title>
+	<link rel="shortcut icon" type="image/png" href="./S&S.png">
+	<link rel="stylesheet" href="./font-awesome/css/font-awesome.min.css">
+	<!--JScrollPanel-->
+	<link rel="stylesheet" type="text/css" href="./JScrollPane/jquery.jscrollpane.css">
+	<!--JScrollPanel-->
+	<link rel="stylesheet" type="text/css" href="cpsStyle.css">
+	<link rel="stylesheet" type="text/css" href="cpsStyle-home.css" title="home">
+	<link rel="alternate stylesheet" type="text/css" href="cpsStyle-filter.css" title="filter" />
+	<link rel="alternate stylesheet" type="text/css" href="cpsStyle-schedule.css" title="schedule" />
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="./jquery.touchwipe.min.js"></script>
+	<script src="./cpsJS.js"></script>
+	<!--JScrollPanel-->
+	<script src="./JScrollPane/jquery.jscrollpane.min.js" defer></script>
+	<!--JScrollPanel-->
+</head>
+
+<body>
+	<header>
+		<div id="bars"><i class="fa fa-bars"></i></div>
+		<a href="./cps.html">
+			<div id="logo">CPS</div>
+		</a>
+		<div id="search-bar">
+			<input type="search" id="searchWhat" placeholder="搜尋中英文課名或老師姓名"></input>
+			<i class="fa fa-search" id="search-icon"></i>
+		</div>
+
+		<div id="options">
+			<span class="list" id="filterPanel">
+				<div id="list-triangle"></div>
+				<div id="listView">
+					<div id="listViewTop">
+						<span class="listViewTopContent">
+							<div class="styled-select">
+								<select id="studentType" name="degree">
+									　<option value="0">學士</option>
+									<option value="1">碩士</option>
+									<option value="2">博士</option>
+									<option value="3">進修學士班</option>
+									<option value="4">進修在職專班</option>
+									<option value="5">碩士學位班</option>
+									<option value="6">碩士推廣學分班</option>
+									<option value="7">學士推廣學分班</option>
+								</select>
+							</div>
+							<div class="styled-select" id="width-79px">
+								<select name="department" id="department">
+									<option value="090M">共同教育中心博雅教育組</option>
+									<option value="0507">資工系</option>
+									<option value="0701">商船系</option>
+									<option value="0703">航管系</option>
+									<option value="0603">運輸技術系航海組</option>
+									<option value="0608">運輸科學系</option>
+									<option value="060E">運輸與航海科學系航海組</option>
+									<option value="0609">運輸與航海科學系運輸組</option>
+									<option value="060B">輪機系輪機動力組</option>
+									<option value="060A">輪機系能源應用組</option>
+									<option value="0606">輪機系四年制</option>
+									<option value="060D">輪機系動力工程組</option>
+									<option value="0706">洋光系</option>
+									<option value="0300">生命科學院</option>
+									<option value="0309">食科系食品科學組</option>
+									<option value="030A">食科系生物科技組</option>
+									<option value="0302">食科系</option>
+									<option value="0303">養殖系</option>
+									<option value="030B">生命科學暨生物科技學系</option>
+									<option value="0800">海洋科學與資源學院</option>
+									<option value="0301">環漁系</option>
+									<option value="0801">海洋環境資訊系</option>
+									<option value="0500">工學院</option>
+									<option value="0702">機械系</option>
+									<option value="0501">系工系</option>
+									<option value="0502">河工系</option>
+									<option value="0600">電機資訊學院</option>
+									<option value="0503">電機系</option>
+									<option value="060C">通訊與導航工程學系</option>
+									<option value="0808">光電系</option>
+									<option value="0900">人文社會科學院</option>
+									<option value="090K">共同教育中心語文教育組</option>
+									<option value="090G">共同教育中心</option>
+									<option value="090B">外語教學研究中心</option>
+									<option value="090D">大學部英語課程</option>
+									<option value="090N">共同教育中心華語中心</option>
+									<option value="0901">通識教育中心</option>
+									<option value="0905">師資培育中心</option>
+									<option value="0908">國外校際(學)</option>
+									<option value="0907">校際選課</option>
+									<option value="0906">抵免課程</option>
+									<option value="0903">軍訓室</option>
+									<option value="0902">體育室</option>
+									<option value="0904">大學暑修班</option>
+									<option value="090S">學務處</option>
+									<option value="1000">海洋法律與政策學院（學）</option>
+									<option value="0912">校際選課(外文)</option>
+									<option value="0061">體育室體育教學組</option>
+									<option value="0100">行政單位</option>
+									<option value="0911">校際選課(體育)</option>
+									<option value="090L">共同教育中心體育教學組</option>
+									<option value="0910">校際選課(博雅)</option>
+									<option value="1001">海洋法政學士學位學程</option>
+									<option value="0909">校際選課（臺北聯合大學系統）</option>
+									<option value="0062">體育室體育活動組</option>
+								</select>
+							</div>
+							<div class="styled-select" id="width-42px">
+								<select name="grade">
+									<option value="全部">全部</option>
+									　 <option value="1">1</option>
+									　 <option value="2">2</option>
+									　 <option value="3">3</option>
+									<option value="4">4</option>
+									　 <option value="5">5</option>
+									<option value="6">6</option>
+									<option value="7">7</option>
+									<option value="8">8</option>
+								</select>
+							</div>
+							<span class="listWord">年</span>
+							<div class="styled-select" id="width-42px">
+								<select name="class">
+									<option value="全部">全部</option>
+									<option value="A">A</option>
+									<option value="B">B</option>
+									<option value="C">C</option>
+									<option value="D">D</option>
+									<option value="E">E</option>
+									<option value="F">F</option>
+									<option value="G">G</option>
+									<option value="H">H</option>
+									<option value="I">I</option>
+									<option value="J">J</option>
+									<option value="K">K</option>
+									<option value="L">L</option>
+									<option value="M">M</option>
+									<option value="N">N</option>
+									<option value="O">O</option>
+									<option value="P">P</option>
+									<option value="Q">Q</option>
+									<option value="R">R</option>
+									<option value="S">S</option>
+									<option value="T">T</option>
+									<option value="U">U</option>
+									<option value="V">V</option>
+									<option value="W">W</option>
+									<option value="X">X</option>
+									<option value="Y">Y</option>
+									<option value="Z">Z</option>
+								</select>
+							</div>
+							<span class="listWord">班</span>
+							<!--系館-->
+						</span>
+						<span class="listViewTopContent">
+							<span class="listWord" id="top-2px">課號</span>
+							<input type="text" id="inputClassID"></input>
+						</span>
+						<span class="listViewTopContent">
+							<span class="listWord" id="top-2px">課程名稱</span>
+							<input type="text" id="inputClassName"></input>
+						</span>
+						<span class="listViewTopContent">
+							<span class="listWord" id="top-2px">教授</span>
+							<input type="text" id="inputTeacherName"></input>
+						</span>
+						<span class="listViewTopContent">
+							<span class="listWord">星期</span>
+							<div class="styled-select" id="width-51px"><select name="time">
+									<option value="1">一</option>
+									<option value="2">二</option>
+									<option value="3">三</option>
+									<option value="4">四</option>
+									<option value="5">五</option>
+									<option value="6">六</option>
+									<option value="7">日</option>
+								</select></div><span class="listWord">第</span>
+							<div class="styled-select" id="width-51px"><select name="time">
+									<option value="全部">全部</option>
+									<option value="01">01</option>
+									<option value="02">02</option>
+									<option value="03">03</option>
+									<option value="04">04</option>
+									<option value="05">05</option>
+									<option value="06">06</option>
+									<option value="07">07</option>
+									<option value="08">08</option>
+									<option value="09">09</option>
+									<option value="10">10</option>
+									<option value="11">11</option>
+									<option value="12">12</option>
+									<option value="13">13</option>
+									<option value="14">14</option>
+								</select></div><span class="listWord">節</span>
+						</span>
+						<span class="listViewTopContent">
+							<span class="listWord">系館</span>
+							<div class="styled-select" id="width-163px"><select name="building">
+									<option value="BOH">人文大樓</option>
+									<option value="CC3">電算中心三樓</option>
+									<option value="CC4">電算中心四樓</option>
+									<option value="CE-">工學院大樓</option>
+									<option value="CSE">理工學院視聽教室</option>
+									<option value="EE1">電機一館</option>
+									<option value="EE2">電機二館</option>
+									<option value="FSH">漁學館</option>
+									<option value="GH1">綜合一館</option>
+									<option value="GH2">綜合二館</option>
+									<option value="GRC">綜合研究中心</option>
+									<option value="HR1">河工一館</option>
+									<option value="HR2">河工二館</option>
+									<option value="INS">資工系館</option>
+									<option value="LIB">圖書館</option>
+									<option value="MAF">海事大樓</option>
+									<option value="MEA">機械A館</option>
+									<option value="MEB">機械B館</option>
+									<option value="MFE">食科工程館</option>
+									<option value="MFS">食科科學館</option>
+									<option value="NAV">商船大樓</option>
+									<option value="NVA">系工系館</option>
+									<option value="SAH">海空大樓</option>
+									<option value="STM">航館大樓</option>
+									<option value="TEC">技術大樓</option>
+									<option value="OCE">環資系館</option>
+									<option value="GH3">綜合三館</option>
+									<option value="STA">育樂館</option>
+									<option value="IVY">沛華大樓</option>
+									<option value="CLS">生命科學院館</option>
+								</select></div>
+						</span>
+						<div id="plus">
+							<i class="fa fa-plus-circle"></i>
+						</div>
+					</div>
+					<div id="listViewMiddle">
+						<div class="filterIcon">
+							<div class="grayCircle">
+								<div class="whiteCircle" title="系所年級">
+									<i class="fa fa-graduation-cap"></i>
+								</div>
+							</div>
+							<div class="filterList">
+							</div>
+						</div>
+						<div class="filterIcon">
+							<div class="grayCircle">
+								<div class="whiteCircle" title="課號">
+									<i class="fa fa-font"></i>
+								</div>
+							</div>
+							<div class="filterList">
+
+							</div>
+						</div>
+						<div class="filterIcon">
+							<div class="grayCircle">
+								<div class="whiteCircle" title="課名">
+									<i class="fa fa-pencil"></i>
+								</div>
+							</div>
+							<div class="filterList">
+
+							</div>
+						</div>
+						<div class="filterIcon">
+							<div class="grayCircle">
+								<div class="whiteCircle" title="教授名稱">
+									<i class="fa fa-male"></i>
+								</div>
+							</div>
+							<div class="filterList">
+							</div>
+						</div>
+						<div class="filterIcon">
+							<div class="grayCircle">
+								<div class="whiteCircle" title="時間">
+									<i class="fa fa-clock-o"></i>
+								</div>
+							</div>
+							<div class="filterList">
+							</div>
+						</div>
+						<div class="filterIcon">
+							<div class="grayCircle">
+								<div class="whiteCircle" title="系館">
+									<i class="fa fa-university"></i>
+								</div>
+							</div>
+							<div class="filterList">
+							</div>
+						</div>
+					</div>
+					<div id="listViewBottom">
+						<div id="cancelFilterTags">Clear</div>
+						<div id="okGoFilter">OK</div>
+					</div>
+				</div>
+			</span>
+			<span class="list" id="gearPanel">
+				<div id="list-triangle"></div>
+				<div id="listView">
+					<!--<span class="listViewTopContent">
+							<div class="styled-select">
+								<select id="studentType" name="degree" >
+								　<option value="0">學士</option>
+									<option value="1">碩士</option>
+									<option value="2">博士</option>
+									<option value="3">進修學士班</option>
+									<option value="4">進修在職專班</option>
+									<option value="5">碩士學位班</option>
+									<option value="6">碩士推廣學分班</option>
+									<option value="7">學士推廣學分班</option>
+								</select>
+							</div>
+							<div class="styled-select">
+								<select name="department" id="department">
+									<option value="090M">共同教育中心博雅教育組</option>
+									<option value="0507">資工系</option>
+									<option value="0701">商船系</option>
+									<option value="0703">航管系</option>
+									<option value="0603">運輸技術系航海組</option>
+									<option value="0608">運輸科學系</option>
+									<option value="060E">運輸與航海科學系航海組</option>
+									<option value="0609">運輸與航海科學系運輸組</option>
+									<option value="060B">輪機系輪機動力組</option>
+									<option value="060A">輪機系能源應用組</option>
+									<option value="0606">輪機系四年制</option>
+									<option value="060D">輪機系動力工程組</option>
+									<option value="0706">洋光系</option>
+									<option value="0300">生命科學院</option>
+									<option value="0309">食科系食品科學組</option>
+									<option value="030A">食科系生物科技組</option>
+									<option value="0302">食科系</option>
+									<option value="0303">養殖系</option>
+									<option value="030B">生命科學暨生物科技學系</option>
+									<option value="0800">海洋科學與資源學院</option>
+									<option value="0301">環漁系</option>
+									<option value="0801">海洋環境資訊系</option>
+									<option value="0500">工學院</option>
+									<option value="0702">機械系</option>
+									<option value="0501">系工系</option>
+									<option value="0502">河工系</option>
+									<option value="0600">電機資訊學院</option>
+									<option value="0503">電機系</option>
+									<option value="060C">通訊與導航工程學系</option>
+									<option value="0808">光電系</option>
+									<option value="0900">人文社會科學院</option>
+									<option value="090K">共同教育中心語文教育組</option>
+									<option value="090G">共同教育中心</option>
+									<option value="090B">外語教學研究中心</option>
+									<option value="090D">大學部英語課程</option>
+									<option value="090N">共同教育中心華語中心</option>
+									<option value="0901">通識教育中心</option>
+									<option value="0905">師資培育中心</option>
+									<option value="0908">國外校際(學)</option>
+									<option value="0907">校際選課</option>
+									<option value="0906">抵免課程</option>
+									<option value="0903">軍訓室</option>
+									<option value="0902">體育室</option>
+									<option value="0904">大學暑修班</option>
+									<option value="090S">學務處</option>
+									<option value="1000">海洋法律與政策學院（學）</option>
+									<option value="0912">校際選課(外文)</option>
+									<option value="0061">體育室體育教學組</option>
+									<option value="0100">行政單位</option>
+									<option value="0911">校際選課(體育)</option>
+									<option value="090L">共同教育中心體育教學組</option>
+									<option value="0910">校際選課(博雅)</option>
+									<option value="1001">海洋法政學士學位學程</option>
+									<option value="0909">校際選課（臺北聯合大學系統）</option>
+									<option value="0062">體育室體育活動組</option>
+								</select>
+							</div>
+							<div class="styled-select">
+								<select name="grade" >
+									<option value="全部">全部</option>
+							　		<option value="1">1</option>
+							　		<option value="2">2</option>
+							　		<option value="3">3</option>
+									<option value="4">4</option>
+							　		<option value="5">5</option>
+									<option value="6">6</option>
+									<option value="7">7</option>
+									<option value="8">8</option>
+								</select>
+							</div>
+							<span class="listWord">年</span>
+							<div class="styled-select">
+								<select name="class" >
+									<option value="全部">全部</option>
+									<option value="A">A</option>
+									<option value="B">B</option>
+									<option value="C">C</option>
+									<option value="D">D</option>
+									<option value="E">E</option>
+									<option value="F">F</option>
+									<option value="G">G</option>
+									<option value="H">H</option>
+									<option value="I">I</option>
+									<option value="J">J</option>
+									<option value="K">K</option>
+									<option value="L">L</option>
+									<option value="M">M</option>
+									<option value="N">N</option>
+									<option value="O">O</option>
+									<option value="P">P</option>
+									<option value="Q">Q</option>
+									<option value="R">R</option>
+									<option value="S">S</option>
+									<option value="T">T</option>
+									<option value="U">U</option>
+									<option value="V">V</option>
+									<option value="W">W</option>
+									<option value="X">X</option>
+									<option value="Y">Y</option>
+									<option value="Z">Z</option>
+								</select>
+							</div>
+							<span class="listWord">班</span>-->
+				</div>
+			</span>
+			<span class="list" id="loginPanel">
+				<div id="list-triangle"></div>
+				<div id="listView">
+					<div id="loading">
+						<!--<img id="loadingGif" src="./assets/hourglass.gif">-->
+					</div>
+					<div id="logout">
+						<div class="cps">CPS</div>
+						<img id="logoutImg" src="./assets/logout.png">
+						<div id="logoutButton">Logout</div>
+						<div class="remind">
+							<i class="fa fa-exclamation-triangle"></i>
+							&nbsp;若未登入則無法儲存與瀏覽預選課表
+						</div>
+					</div>
+					<div id="login">
+						<div class="cps">CPS</div>
+						<form action="">
+							<input id="username" class="input" type="text" required>
+							<i class="fa fa-user place"></i>
+							</input>
+							<input id="password" class="input" type="password" required>
+							<i class="fa fa-lock place"></i>
+							</input>
+
+						</form>
+						<div>
+							<div id="loginButton">Login</div>
+						</div>
+						<div class="remind">
+							<i class="fa fa-exclamation-triangle"></i>
+							&nbsp;若未登入則無法儲存與瀏覽預選課表
+						</div>
+						<div class="remind" id="warning">帳號或密碼錯誤，請重新輸入</div>
+					</div>
+				</div>
+			</span>
+			<a href="./cps-schedule.html">
+				<i class="fa fa-book" title="課表"></i>
+			</a>
+			<i class="fa fa-filter" title="篩選"></i>
+			<span class="RWDhidden">
+				|
+				<i class="fa fa-cog" title="設定"></i>
+				<a href="https://docs.google.com/forms/d/1Qevw8pKaChvVUwkZPaGjMLwkZX-G9F_bfx7z-Z-DS8I/viewform?c=0&w=1">
+					<i class="fa fa-commenting-o" title="意見回饋"></i>
+				</a>
+				<i class="fa fa-user" title="登入">&nbsp;&nbsp;<div class="words userName">Login<!--00252107--></div></i>
+			</span>
+		</div>
+
+	</header>
+	<div id="cover"></div>
+	<div id="toast"></div>
+	<nav>
+		<div class="rectangle"></div>
+		<div class="rectangle">
+			<i class="fa fa-user" title="登入">&nbsp;&nbsp;<div class="words userName">Login<!--00252107--></div></i>
+		</div>
+		<div class="rectangle">
+			<i class="fa fa-cog" title="設定">&nbsp;&nbsp;<span class="words">設定</span></i>
+		</div>
+		<div class="rectangle">
+			<a href="https://docs.google.com/forms/d/1Qevw8pKaChvVUwkZPaGjMLwkZX-G9F_bfx7z-Z-DS8I/viewform?c=0&w=1">
+				<i class="fa fa-commenting-o" title="意見回饋">&nbsp;<span class="words">意見回饋</span></i>
+			</a>
+		</div>
+	</nav>
+	<div id="background">
+		<div id="left-top">
+			<div>NTOU CPS</div>
+			<div>Course Preselection System</div>
+		</div>
+
+		<div id="right-bottom">
+			<a href="https://500px.com/vincentwan"><img src="./assets/AWS.png" id="AWS"></img></a>
+		</div>
+	</div>
+	<div id="content">
+		<div id="slogan">you can choose what courses you want</div>
+		<section>
+			<h4 class="title">#What is CPS</h4>
+			<article>
+				<p>
+					CPS為 Course Pre-selection System的縮寫，也就是「預選課系統」，CPS是為了弭補
+					教學務系統上搜尋課程功能的不足而生。在教學務系統中，課程搜尋功能僅能透過「單
+					一條件或是有限的條件」去查找課程。舉例來說，使用者不可能在教學務系統直接搜尋
+					「星期一下午106與107節的博雅通識課」或是「在育樂館內上課的課程」，但在CPS中
+					，搜尋這些課程都變得輕而易舉。CPS則提供了強大的「多條件篩選」功能，可以列舉
+					多個條件一進行篩選，並將課程的必要資訊提供給使用者。
+				</p>
+				<p>
+					而CPS中的課程也可在本校生登入後讓使用者經由「預選」加至自己的「預選課表」，
+					但所選的課程並<strong>&nbsp;<i class="fa fa-exclamation-circle"></i>&nbsp;不會影響到校務系統上的實際選課</strong>。因為CPS主要是希望能夠透過便利
+					的篩選功能，在真正選課之前，讓大家找到自己想要、喜歡的課程，並有地方能夠紀錄
+					下來，讓大家不需要「想找某堂課時必須重新搜尋一次」。
+				</p>
+			</article>
+		</section>
+		<section>
+			<h4 class="title">#How to use it?</h4>
+			<article>
+				<ul id="featureIntroduction">
+					<li><i class="fa fa-user" title="登入"></i>&nbsp;Login</li>
+					<p>登入功能僅限本校師生使用，帳號密碼同Moodle。預選課、儲存課程至課表功能僅在登入之後才能使用</p>
+
+					<li><i class="fa fa-cog" title="設定"></i>&nbsp;設定</li>
+					<p>該功能有一點小問題，尚未開放，嘿嘿嘿</p>
+					<p>\志榮/\志榮/\志榮/\志榮/\志榮/\志榮/\志榮/\志榮/\志榮/\志榮/\志榮/\志榮/</p>
+
+					<li><i class="fa fa-filter" title="篩選"></i>&nbsp;搜尋與篩選課程</li>
+					<p>要使用篩選功能，首先你必須選擇你要針對哪一種條件做篩選，以下個圖示各代表一種條件類別</p>
+					<table id="demofilterIcon">
+						<tr>
+							<th>圖示</th>
+							<th>意義</th>
+						</tr>
+						<tr>
+							<td><i class="fa fa-graduation-cap"></i></td>
+							<td>代表選擇「學位、系所、年級、班級」進行篩選</td>
+						</tr>
+						<tr>
+							<td><i class="fa fa-font"></i></td>
+							</td>
+							<td>代表輸入「課號」進行篩選</td>
+						</tr>
+						<tr>
+							<td><i class="fa fa-pencil"></i></td>
+							</td>
+							<td>代表輸入「課名」進行篩選</td>
+						</tr>
+						<tr>
+							<td><i class="fa fa-male"></i></td>
+							</td>
+							<td>代表輸入「該堂課授課教授姓名」進行篩選</td>
+						</tr>
+						<tr>
+							<td><i class="fa fa-clock-o"></i></td>
+							</td>
+							<td>代表選擇「時間」，也就是星期幾的第幾堂課進行篩選</td>
+						</tr>
+						<tr>
+							<td><i class="fa fa-university"></i></td>
+							</td>
+							<td>代表選擇「該堂課的上課地點」進行篩選</td>
+						</tr>
+					</table>
+					<p>在圖示被選擇時，可以依照該條件所提供的輸入方式「選擇」或「輸入」要進行篩選的內容</p>
+					<p>確定選擇內容後，可以按下<i class="fa fa-plus-circle"></i>新增一個Tag，也就是篩選的條件</p>
+					<p>在選擇多個Tag之後按下「OK」即可進行篩選，按下「Clear」即可清除所有Tag</p>
+					<p>
+						<strong>
+							Ex.
+							<ol id="filterExample">
+								<li>選擇授課教授圖示</li>
+								<li>輸入「馬」</li>
+								<li>按下<i class="fa fa-plus-circle"></i>新增一個Tag「馬」</li>
+								<li>再輸入「陳」</li>
+								<li>再按下<i class="fa fa-plus-circle"></i>新增一個Tag「陳」</li>
+								<li>按下「OK」送出篩選條件</li>
+								<li>篩選出全校姓名中有「馬」、「陳」的教授所開的課</li>
+							</ol>
+						</strong>
+					</p>
+					<li><i class="fa fa-book" title="課表"></i>&nbsp;個人課表</li>
+					<p>你登入之後預選課的課程就都存在這裡啦，請記得先登入才能預選課唷</p>
+					<li><i class="fa facommenting-o" title="意見回饋"></i>&nbsp;意見與問題反映</li>
+					<p>如果有覺得可以新增什麼功能、CPS哪裡的資訊錯誤、有bug等等，有任何覺得CPS可以更好的地方，都可以在此表單反映，讓我們知道。</p>
+				</ul>
+			</article>
+		</section>
+		<section>
+			<h4 class="title">#Q&A</h4>
+			<article>
+				<ul>
+					<li>Q：什麼樣的人可以使用CPS</li>
+					<p>A：只要是身為海大師生，皆可以使用CPS完整功能，非海大師生，則僅限於使用CPS觀看課程功能。</p>
+
+					<li>Q：如果沒登入有什麼關係嗎?</li>
+					<p>A：未登入者則設為訪客權限，僅能提供瀏覽課程服務。</p>
+
+					<li>Q：什麼時候會更新出現下學期課程</li>
+					<p>A：要更新的事情太多了，就更天吧！</p>
+
+					<li>Q：為甚麼要設定 設定之後能幹嘛?</li>
+					<p>A：使用者可經由設定功能填寫個人系所、年級，以利系統自動抓選必修課程，方便使用者做選取。</p>
+
+					<li>Q：不設定設定系所、年級等等資料可以嗎?</li>
+					<p>A：可以，開心就好，很free的。</p>
+
+				</ul>
+			</article>
+		</section>
+	</div>
+	<footer>
+		Copyright © 2015 by&nbsp;&nbsp;<a
+			href="https://www.facebook.com/profile.php?id=100002020489307">wuganda@gmail.com</a>&nbsp;&nbsp;NTOU CS
+	</footer>
+</body>
+
+</html>
