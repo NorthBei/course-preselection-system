@@ -45,8 +45,9 @@ window.addEventListener("load",function () {
 	document.getElementById("bars").addEventListener("click",slide,false);
 	//$("#bars").on({click:slide});
 	
-	$(".fa-filter").on("click", { num: options["Filter"] }, showList);
-	
+	$(".fa-filter").on("mouseenter", { num: options["Filter"] }, showList);
+	$(".fa-filter").on("mouseleave", { num: options["Filter"] }, showList);
+
 	if(!isMobile){ //是電腦的話
 		$(".fa-cog").on("click", { num: options["Gear"] }, showList);
 		$(".RWDhidden>.fa-user").on("click", { num: options["Login"] }, showList);
